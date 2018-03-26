@@ -1,0 +1,127 @@
+object formGeneral: TformGeneral
+  Left = 498
+  Height = 605
+  Top = 144
+  Width = 884
+  BorderWidth = 10
+  Caption = 'Series de Taylor'
+  ClientHeight = 605
+  ClientWidth = 884
+  OnCreate = FormCreate
+  OnDestroy = destroy
+  LCLVersion = '1.8.0.6'
+  object execute: TButton
+    Left = 733
+    Height = 25
+    Top = 20
+    Width = 75
+    Caption = 'aceptar'
+    OnClick = executeTaylor
+    TabOrder = 0
+  end
+  object inputAngleType: TComboBox
+    Left = 20
+    Height = 26
+    Top = 20
+    Width = 100
+    ItemHeight = 19
+    TabOrder = 1
+    Text = 'tipo de angulo'
+  end
+  object inputFunciones: TComboBox
+    Left = 150
+    Height = 26
+    Top = 20
+    Width = 100
+    ItemHeight = 19
+    TabOrder = 2
+    Text = 'inputFunciones'
+  end
+  object x: TLabeledEdit
+    Left = 270
+    Height = 21
+    Top = 20
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = x
+    EditLabel.AnchorSideRight.Control = x
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = x
+    EditLabel.Left = 270
+    EditLabel.Height = 16
+    EditLabel.Top = 1
+    EditLabel.Width = 80
+    EditLabel.Caption = 'x'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object error: TLabeledEdit
+    Left = 370
+    Height = 21
+    Top = 20
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = error
+    EditLabel.AnchorSideRight.Control = error
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = error
+    EditLabel.Left = 370
+    EditLabel.Height = 16
+    EditLabel.Top = 1
+    EditLabel.Width = 80
+    EditLabel.Caption = 'error'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+    Text = '0.001'
+  end
+  object resultadoLabel: TLabel
+    Left = 500
+    Height = 16
+    Top = 20
+    Width = 61
+    Caption = 'resultado:'
+    ParentColor = False
+  end
+  object iteracionesGrid: TStringGrid
+    Left = 170
+    Height = 500
+    Top = 80
+    Width = 500
+    TabOrder = 5
+    ColWidths = (
+      64
+      97
+      134
+      122
+      65
+    )
+    Cells = (
+      3
+      1
+      0
+      'Iteraciones'
+      2
+      0
+      'Xn'
+      3
+      0
+      'Error'
+    )
+  end
+  object A: TLabeledEdit
+    Left = 63
+    Height = 21
+    Top = 112
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = A
+    EditLabel.AnchorSideRight.Control = A
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = A
+    EditLabel.Left = 63
+    EditLabel.Height = 16
+    EditLabel.Top = 93
+    EditLabel.Width = 80
+    EditLabel.Caption = 'A'
+    EditLabel.ParentColor = False
+    TabOrder = 6
+    Text = '0'
+  end
+end

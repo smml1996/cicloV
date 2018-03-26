@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/local/bin/ppcx64" Date="1511735943"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw -gl  -k-framework -kCocoa -l -vewnhibq -Fi/Users/stefaniemuroyalei/Documents/cicloV/analisis_numerico/tareaTaylor/backup/lib/x86_64-darwin -Fu/Developer/lazarus/lcl/units/x86_64-darwin/cocoa -Fu/Developer/lazarus/lcl/units/x86_64-darwin -Fu/Developer/lazarus/components/lazutils/lib/x86_64-darwin -Fu/Developer/lazarus/packager/units/x86_64-darwin -Fu/Users/stefaniemuroyalei/Documents/cicloV/analisis_numerico/tareaTaylor/backup/ -FU/Users/stefaniemuroyalei/Documents/cicloV/analisis_numerico/tareaTaylor/backup/lib/x86_64-darwin/ -dLCL -dLCLcocoa project1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
