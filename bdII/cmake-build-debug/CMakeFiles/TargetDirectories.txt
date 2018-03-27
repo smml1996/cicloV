@@ -1,0 +1,3 @@
+/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles/bdII.dir
