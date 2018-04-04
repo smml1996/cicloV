@@ -1,0 +1,7 @@
+
+BEGIN_TABLE
+personas
+id integer
+nombre integer
+apellido integer
+END_TABLES

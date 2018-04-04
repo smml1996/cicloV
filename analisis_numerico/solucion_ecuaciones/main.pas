@@ -82,9 +82,17 @@ begin
   metodoNum:= MetodosNumericos.Create;
   metodoNum.numericMethod := metodosInput.ItemIndex;
   metodoNum.errorAllowed:= StrToFloat(error.Text);
-  writeLn(metodoNum.errorAllowed);
-  metodoNum.a := trackMin.Position;
-  metodoNum.b := trackMax.Position;
+  //writeLn(metodoNum.errorAllowed);
+  //metodoNum.a := -34;  //pregunta 4
+  //metodoNum.b := -4;   //pregunta 4
+  //metodoNum.a := 0;//trackMin.Position;
+  //metodoNum.b := 5;//trackMax.Position;
+  metodoNum.a :=-2;
+  metodoNum.b:=-1.6  ;
+  Chart1.Extent.Xmin:= -2;   //pregunta 2
+  Chart1.Extent.Xmax:=-1.6;
+  Chart1.Extent.Xmin:= 0 ;
+  Chart1.Extent.Xmax:= 5;
   temp:= metodoNum.execute();
   //resultado.Caption:= FloatToStr(temp);
   if not isNan(Temp) then begin

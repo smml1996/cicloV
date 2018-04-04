@@ -82,6 +82,54 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Comando.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Comando.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Create.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Create.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Delete.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Delete.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Helpers.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Helpers.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Insert.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Insert.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Interface.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Interface.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Select.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Select.h">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Update.cpp">
+			<Option target="bdII"/>
+		</Unit>
+		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/Update.h">
+			<Option target="bdII"/>
+		</Unit>
 		<Unit filename="/Users/stefaniemuroyalei/Documents/cicloV/bdII/main.cpp">
 			<Option target="bdII"/>
 		</Unit>

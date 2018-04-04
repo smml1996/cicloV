@@ -70,12 +70,15 @@ end;
 
 function metodosNumericos.f(x: Real): Real;
 begin
-    Result:= x*x -1;
+  //Result:= x*x;
+  //Result:= x*x *(sqrt(sqrt(3)) - 6)/(x*x-1) ;
+  //Result:= x*x*x-3*x;
+  Result:=(x*x*x -x*x -2*x+4)*(x*x*x-x*x-2*x+3);
 end;
 
 function MetodosNumericos.Bolzano(x1:Real; x2:Real): Boolean;
 begin
-   if f(x1) * f(x2) < 0 then
+   if f(x1) * f(x2) <= 0 then
       Result:= true
    else
      Result:=False;

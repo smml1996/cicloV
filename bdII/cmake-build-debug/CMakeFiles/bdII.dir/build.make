@@ -81,17 +81,225 @@ CMakeFiles/bdII.dir/main.cpp.o.provides: CMakeFiles/bdII.dir/main.cpp.o.requires
 CMakeFiles/bdII.dir/main.cpp.o.provides.build: CMakeFiles/bdII.dir/main.cpp.o
 
 
+CMakeFiles/bdII.dir/Comando.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Comando.cpp.o: ../Comando.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bdII.dir/Comando.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Comando.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Comando.cpp
+
+CMakeFiles/bdII.dir/Comando.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Comando.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Comando.cpp > CMakeFiles/bdII.dir/Comando.cpp.i
+
+CMakeFiles/bdII.dir/Comando.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Comando.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Comando.cpp -o CMakeFiles/bdII.dir/Comando.cpp.s
+
+CMakeFiles/bdII.dir/Comando.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Comando.cpp.o.requires
+
+CMakeFiles/bdII.dir/Comando.cpp.o.provides: CMakeFiles/bdII.dir/Comando.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Comando.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Comando.cpp.o.provides
+
+CMakeFiles/bdII.dir/Comando.cpp.o.provides.build: CMakeFiles/bdII.dir/Comando.cpp.o
+
+
+CMakeFiles/bdII.dir/Create.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Create.cpp.o: ../Create.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bdII.dir/Create.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Create.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Create.cpp
+
+CMakeFiles/bdII.dir/Create.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Create.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Create.cpp > CMakeFiles/bdII.dir/Create.cpp.i
+
+CMakeFiles/bdII.dir/Create.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Create.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Create.cpp -o CMakeFiles/bdII.dir/Create.cpp.s
+
+CMakeFiles/bdII.dir/Create.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Create.cpp.o.requires
+
+CMakeFiles/bdII.dir/Create.cpp.o.provides: CMakeFiles/bdII.dir/Create.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Create.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Create.cpp.o.provides
+
+CMakeFiles/bdII.dir/Create.cpp.o.provides.build: CMakeFiles/bdII.dir/Create.cpp.o
+
+
+CMakeFiles/bdII.dir/Update.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Update.cpp.o: ../Update.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bdII.dir/Update.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Update.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Update.cpp
+
+CMakeFiles/bdII.dir/Update.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Update.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Update.cpp > CMakeFiles/bdII.dir/Update.cpp.i
+
+CMakeFiles/bdII.dir/Update.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Update.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Update.cpp -o CMakeFiles/bdII.dir/Update.cpp.s
+
+CMakeFiles/bdII.dir/Update.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Update.cpp.o.requires
+
+CMakeFiles/bdII.dir/Update.cpp.o.provides: CMakeFiles/bdII.dir/Update.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Update.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Update.cpp.o.provides
+
+CMakeFiles/bdII.dir/Update.cpp.o.provides.build: CMakeFiles/bdII.dir/Update.cpp.o
+
+
+CMakeFiles/bdII.dir/Delete.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Delete.cpp.o: ../Delete.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bdII.dir/Delete.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Delete.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Delete.cpp
+
+CMakeFiles/bdII.dir/Delete.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Delete.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Delete.cpp > CMakeFiles/bdII.dir/Delete.cpp.i
+
+CMakeFiles/bdII.dir/Delete.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Delete.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Delete.cpp -o CMakeFiles/bdII.dir/Delete.cpp.s
+
+CMakeFiles/bdII.dir/Delete.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Delete.cpp.o.requires
+
+CMakeFiles/bdII.dir/Delete.cpp.o.provides: CMakeFiles/bdII.dir/Delete.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Delete.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Delete.cpp.o.provides
+
+CMakeFiles/bdII.dir/Delete.cpp.o.provides.build: CMakeFiles/bdII.dir/Delete.cpp.o
+
+
+CMakeFiles/bdII.dir/Insert.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Insert.cpp.o: ../Insert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bdII.dir/Insert.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Insert.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Insert.cpp
+
+CMakeFiles/bdII.dir/Insert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Insert.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Insert.cpp > CMakeFiles/bdII.dir/Insert.cpp.i
+
+CMakeFiles/bdII.dir/Insert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Insert.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Insert.cpp -o CMakeFiles/bdII.dir/Insert.cpp.s
+
+CMakeFiles/bdII.dir/Insert.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Insert.cpp.o.requires
+
+CMakeFiles/bdII.dir/Insert.cpp.o.provides: CMakeFiles/bdII.dir/Insert.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Insert.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Insert.cpp.o.provides
+
+CMakeFiles/bdII.dir/Insert.cpp.o.provides.build: CMakeFiles/bdII.dir/Insert.cpp.o
+
+
+CMakeFiles/bdII.dir/Select.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Select.cpp.o: ../Select.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bdII.dir/Select.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Select.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Select.cpp
+
+CMakeFiles/bdII.dir/Select.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Select.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Select.cpp > CMakeFiles/bdII.dir/Select.cpp.i
+
+CMakeFiles/bdII.dir/Select.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Select.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Select.cpp -o CMakeFiles/bdII.dir/Select.cpp.s
+
+CMakeFiles/bdII.dir/Select.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Select.cpp.o.requires
+
+CMakeFiles/bdII.dir/Select.cpp.o.provides: CMakeFiles/bdII.dir/Select.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Select.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Select.cpp.o.provides
+
+CMakeFiles/bdII.dir/Select.cpp.o.provides.build: CMakeFiles/bdII.dir/Select.cpp.o
+
+
+CMakeFiles/bdII.dir/Interface.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Interface.cpp.o: ../Interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bdII.dir/Interface.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Interface.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Interface.cpp
+
+CMakeFiles/bdII.dir/Interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Interface.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Interface.cpp > CMakeFiles/bdII.dir/Interface.cpp.i
+
+CMakeFiles/bdII.dir/Interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Interface.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Interface.cpp -o CMakeFiles/bdII.dir/Interface.cpp.s
+
+CMakeFiles/bdII.dir/Interface.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Interface.cpp.o.requires
+
+CMakeFiles/bdII.dir/Interface.cpp.o.provides: CMakeFiles/bdII.dir/Interface.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Interface.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Interface.cpp.o.provides
+
+CMakeFiles/bdII.dir/Interface.cpp.o.provides.build: CMakeFiles/bdII.dir/Interface.cpp.o
+
+
+CMakeFiles/bdII.dir/Helpers.cpp.o: CMakeFiles/bdII.dir/flags.make
+CMakeFiles/bdII.dir/Helpers.cpp.o: ../Helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bdII.dir/Helpers.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bdII.dir/Helpers.cpp.o -c /Users/stefaniemuroyalei/Documents/cicloV/bdII/Helpers.cpp
+
+CMakeFiles/bdII.dir/Helpers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bdII.dir/Helpers.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stefaniemuroyalei/Documents/cicloV/bdII/Helpers.cpp > CMakeFiles/bdII.dir/Helpers.cpp.i
+
+CMakeFiles/bdII.dir/Helpers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bdII.dir/Helpers.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stefaniemuroyalei/Documents/cicloV/bdII/Helpers.cpp -o CMakeFiles/bdII.dir/Helpers.cpp.s
+
+CMakeFiles/bdII.dir/Helpers.cpp.o.requires:
+
+.PHONY : CMakeFiles/bdII.dir/Helpers.cpp.o.requires
+
+CMakeFiles/bdII.dir/Helpers.cpp.o.provides: CMakeFiles/bdII.dir/Helpers.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Helpers.cpp.o.provides.build
+.PHONY : CMakeFiles/bdII.dir/Helpers.cpp.o.provides
+
+CMakeFiles/bdII.dir/Helpers.cpp.o.provides.build: CMakeFiles/bdII.dir/Helpers.cpp.o
+
+
 # Object files for target bdII
 bdII_OBJECTS = \
-"CMakeFiles/bdII.dir/main.cpp.o"
+"CMakeFiles/bdII.dir/main.cpp.o" \
+"CMakeFiles/bdII.dir/Comando.cpp.o" \
+"CMakeFiles/bdII.dir/Create.cpp.o" \
+"CMakeFiles/bdII.dir/Update.cpp.o" \
+"CMakeFiles/bdII.dir/Delete.cpp.o" \
+"CMakeFiles/bdII.dir/Insert.cpp.o" \
+"CMakeFiles/bdII.dir/Select.cpp.o" \
+"CMakeFiles/bdII.dir/Interface.cpp.o" \
+"CMakeFiles/bdII.dir/Helpers.cpp.o"
 
 # External object files for target bdII
 bdII_EXTERNAL_OBJECTS =
 
 bdII: CMakeFiles/bdII.dir/main.cpp.o
+bdII: CMakeFiles/bdII.dir/Comando.cpp.o
+bdII: CMakeFiles/bdII.dir/Create.cpp.o
+bdII: CMakeFiles/bdII.dir/Update.cpp.o
+bdII: CMakeFiles/bdII.dir/Delete.cpp.o
+bdII: CMakeFiles/bdII.dir/Insert.cpp.o
+bdII: CMakeFiles/bdII.dir/Select.cpp.o
+bdII: CMakeFiles/bdII.dir/Interface.cpp.o
+bdII: CMakeFiles/bdII.dir/Helpers.cpp.o
 bdII: CMakeFiles/bdII.dir/build.make
 bdII: CMakeFiles/bdII.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bdII"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stefaniemuroyalei/Documents/cicloV/bdII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bdII"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bdII.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +308,14 @@ CMakeFiles/bdII.dir/build: bdII
 .PHONY : CMakeFiles/bdII.dir/build
 
 CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/main.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Comando.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Create.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Update.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Delete.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Insert.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Select.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Interface.cpp.o.requires
+CMakeFiles/bdII.dir/requires: CMakeFiles/bdII.dir/Helpers.cpp.o.requires
 
 .PHONY : CMakeFiles/bdII.dir/requires
 

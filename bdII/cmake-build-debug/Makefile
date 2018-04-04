@@ -123,6 +123,222 @@ bdII/fast:
 	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/build
 .PHONY : bdII/fast
 
+Comando.o: Comando.cpp.o
+
+.PHONY : Comando.o
+
+# target to build an object file
+Comando.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Comando.cpp.o
+.PHONY : Comando.cpp.o
+
+Comando.i: Comando.cpp.i
+
+.PHONY : Comando.i
+
+# target to preprocess a source file
+Comando.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Comando.cpp.i
+.PHONY : Comando.cpp.i
+
+Comando.s: Comando.cpp.s
+
+.PHONY : Comando.s
+
+# target to generate assembly for a file
+Comando.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Comando.cpp.s
+.PHONY : Comando.cpp.s
+
+Create.o: Create.cpp.o
+
+.PHONY : Create.o
+
+# target to build an object file
+Create.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Create.cpp.o
+.PHONY : Create.cpp.o
+
+Create.i: Create.cpp.i
+
+.PHONY : Create.i
+
+# target to preprocess a source file
+Create.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Create.cpp.i
+.PHONY : Create.cpp.i
+
+Create.s: Create.cpp.s
+
+.PHONY : Create.s
+
+# target to generate assembly for a file
+Create.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Create.cpp.s
+.PHONY : Create.cpp.s
+
+Delete.o: Delete.cpp.o
+
+.PHONY : Delete.o
+
+# target to build an object file
+Delete.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Delete.cpp.o
+.PHONY : Delete.cpp.o
+
+Delete.i: Delete.cpp.i
+
+.PHONY : Delete.i
+
+# target to preprocess a source file
+Delete.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Delete.cpp.i
+.PHONY : Delete.cpp.i
+
+Delete.s: Delete.cpp.s
+
+.PHONY : Delete.s
+
+# target to generate assembly for a file
+Delete.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Delete.cpp.s
+.PHONY : Delete.cpp.s
+
+Helpers.o: Helpers.cpp.o
+
+.PHONY : Helpers.o
+
+# target to build an object file
+Helpers.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Helpers.cpp.o
+.PHONY : Helpers.cpp.o
+
+Helpers.i: Helpers.cpp.i
+
+.PHONY : Helpers.i
+
+# target to preprocess a source file
+Helpers.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Helpers.cpp.i
+.PHONY : Helpers.cpp.i
+
+Helpers.s: Helpers.cpp.s
+
+.PHONY : Helpers.s
+
+# target to generate assembly for a file
+Helpers.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Helpers.cpp.s
+.PHONY : Helpers.cpp.s
+
+Insert.o: Insert.cpp.o
+
+.PHONY : Insert.o
+
+# target to build an object file
+Insert.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Insert.cpp.o
+.PHONY : Insert.cpp.o
+
+Insert.i: Insert.cpp.i
+
+.PHONY : Insert.i
+
+# target to preprocess a source file
+Insert.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Insert.cpp.i
+.PHONY : Insert.cpp.i
+
+Insert.s: Insert.cpp.s
+
+.PHONY : Insert.s
+
+# target to generate assembly for a file
+Insert.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Insert.cpp.s
+.PHONY : Insert.cpp.s
+
+Interface.o: Interface.cpp.o
+
+.PHONY : Interface.o
+
+# target to build an object file
+Interface.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Interface.cpp.o
+.PHONY : Interface.cpp.o
+
+Interface.i: Interface.cpp.i
+
+.PHONY : Interface.i
+
+# target to preprocess a source file
+Interface.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Interface.cpp.i
+.PHONY : Interface.cpp.i
+
+Interface.s: Interface.cpp.s
+
+.PHONY : Interface.s
+
+# target to generate assembly for a file
+Interface.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Interface.cpp.s
+.PHONY : Interface.cpp.s
+
+Select.o: Select.cpp.o
+
+.PHONY : Select.o
+
+# target to build an object file
+Select.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Select.cpp.o
+.PHONY : Select.cpp.o
+
+Select.i: Select.cpp.i
+
+.PHONY : Select.i
+
+# target to preprocess a source file
+Select.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Select.cpp.i
+.PHONY : Select.cpp.i
+
+Select.s: Select.cpp.s
+
+.PHONY : Select.s
+
+# target to generate assembly for a file
+Select.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Select.cpp.s
+.PHONY : Select.cpp.s
+
+Update.o: Update.cpp.o
+
+.PHONY : Update.o
+
+# target to build an object file
+Update.cpp.o:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Update.cpp.o
+.PHONY : Update.cpp.o
+
+Update.i: Update.cpp.i
+
+.PHONY : Update.i
+
+# target to preprocess a source file
+Update.cpp.i:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Update.cpp.i
+.PHONY : Update.cpp.i
+
+Update.s: Update.cpp.s
+
+.PHONY : Update.s
+
+# target to generate assembly for a file
+Update.cpp.s:
+	$(MAKE) -f CMakeFiles/bdII.dir/build.make CMakeFiles/bdII.dir/Update.cpp.s
+.PHONY : Update.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +375,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... bdII"
+	@echo "... Comando.o"
+	@echo "... Comando.i"
+	@echo "... Comando.s"
+	@echo "... Create.o"
+	@echo "... Create.i"
+	@echo "... Create.s"
+	@echo "... Delete.o"
+	@echo "... Delete.i"
+	@echo "... Delete.s"
+	@echo "... Helpers.o"
+	@echo "... Helpers.i"
+	@echo "... Helpers.s"
+	@echo "... Insert.o"
+	@echo "... Insert.i"
+	@echo "... Insert.s"
+	@echo "... Interface.o"
+	@echo "... Interface.i"
+	@echo "... Interface.s"
+	@echo "... Select.o"
+	@echo "... Select.i"
+	@echo "... Select.s"
+	@echo "... Update.o"
+	@echo "... Update.i"
+	@echo "... Update.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
