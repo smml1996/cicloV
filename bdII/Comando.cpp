@@ -130,7 +130,6 @@ void Comando::processComando(){
             getBlockSize();
             getRegistros();
             isValidRegistro = vector<bool> (registros.size(), true);
-            cout << registros.size() << endl;
             getTokensCondicionLogica(4);
             if(tokens.size() > 0)
                 getAnswerCondicionLogica(tokens,0);
@@ -375,7 +374,6 @@ void Comando::getAnswerCondicionLogica(queue<string> &t, const int &op) {
             for(int i =0; i < registros.size(); i++){
 
                 if(indexLeftAtt != -1){
-                    cout << registros[i][indexLeftAtt] << ": "<< registros[i][indexLeftAtt].size()<< endl;
                     leftNumber = Helpers::getNumber(registros[i][indexLeftAtt]);
                 }
 
@@ -418,11 +416,14 @@ void Comando::getBlockSize() {
 
 void Comando::getDataSizes() {
 
-    for(int i =0; i < dataTypes.size(); i++){
-        if(dataTypes[i]== INTEGER || dataTypes[i] == DATE){
+    for(int i =0; i < dataTypes.size(); i++) {
+        if ( dataTypes[i] == DATE) {
             dataSizes.push_back(8);
-        }else{
-            dataSizes.push_back(Helpers().getNumber(dataTypes[i].substr(5,dataTypes[i].size()-1 )));
+        }else if(dataTypes[i] == INTEGER ) {
+            dataSizes.push_back(11);
+        } else {
+            dataSizes.push_back(Helpers().getNumber(dataTypes[i].substr(5, 2)));
+
         }
     }
 
@@ -446,7 +447,6 @@ void Comando::getRegistros() {
             contents = new char[blockSize];
 
             pbuf->sgetn(contents, blockSize);
-            cout << contents << endl;
             i++;
             char empty[]=" ";
             if(strncmp(contents, empty, 1 ) != 0){
@@ -460,15 +460,13 @@ void Comando::getRegistros() {
                     final = "";
                     string temp2 = temp.substr(acum, dataSizes[j]);
                     acum+=dataSizes[j];
-
                         for(int  k = 0; k < temp2.size(); k++){
-                            if(temp[k]!='/'){
+                            if(temp2[k]!='/'){
                                 final+=temp2[k];
                             }else{
                                 break;
                             }
                         }
-
 
                     registros[registros.size()-1].push_back(final);
                 }
@@ -496,7 +494,6 @@ bool Comando::isFragmented(int &index) {
 
 
             pbuf->sgetn(contents,blockSize);
-            cout << contents << endl;
 
             if(strncmp(contents, empty,1) ==0){
                 return true;
@@ -536,8 +533,6 @@ string Comando::getLastBlock() {
     std::streambuf * pbuf = ostr.rdbuf();
 
     long fileSize = pbuf->pubseekoff(0,ostr.end);
-
-    cout << fileSize << endl;
     pbuf->pubseekpos( fileSize -  blockSize);
 
     char liquidPaper[blockSize+1];

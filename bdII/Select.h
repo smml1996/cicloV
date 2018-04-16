@@ -9,6 +9,7 @@
 #include "Comando.h"
 
 class Select : public Comando{
+    void displayAttributes();
 public:
     void process();
 };

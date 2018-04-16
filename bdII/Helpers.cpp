@@ -9,11 +9,14 @@
 using namespace std;
 
 int Helpers::getNumber(const string  &number){
-
     if(number.size() == 0) throw invalid_argument("not a number");
     int result =0;
 
-    for(int i =0; i< number.size(); i++){
+    int i =0;
+    bool isNegative = number.at(i) == '-';
+    if(isNegative)i++;
+
+    for(; i< number.size(); i++){
         if(number.at(i) >= '0' && number.at(i) <='9'){
             result+= number.at(i)- '0';
             if(i!= number.size()-1) result*=10;
@@ -21,6 +24,8 @@ int Helpers::getNumber(const string  &number){
             throw invalid_argument("Not a number");
         }
     }
+
+    if(isNegative) result*=-1;
     return result;
 }
 

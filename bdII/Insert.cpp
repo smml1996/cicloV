@@ -19,7 +19,6 @@ void Insert::getAtributes() {
         if(a[i] == ',' ){
             int index = getAttributeIndex(temp);
             if(index != -1){
-                cout << "index: " << index << endl;
                 isAttributedListed[index] = true;
                 temp = "";
             }else{
@@ -103,10 +102,10 @@ bool Insert::valuesAreValid() {
     for(int i =0; i < values.size(); i++){
 
         if(values[i] != NULO){
-            if(dataTypes[i] == CHARS){
+            if(dataTypes[i].substr(0,4) == CHARS){
                 if(values[i].size()-2> dataSizes[i]) return false;
-                if(values[i][0] != '"' || values[i][values[i].size()] != '"') return false;
-                values[i] = values[i].substr(1, values[i].size()-1);
+                if(values[i][0] != '"' || values[i][values[i].size()-1] != '"') return false;
+                values[i] = values[i].substr(1, values[i].size()-2);
             }else if(dataTypes[i] == DATE && !Helpers().isDate(values[i])) return false;
             else if(!Helpers().isNumber(values[i]))return false;
         }

@@ -31,7 +31,6 @@ using namespace std;
 
 void Create::getAttributos() {
 
-    cout << splittedComando.size() << endl;
     string temp;
     for(int i = 2; i < splittedComando.size(); i++){
 
@@ -44,7 +43,7 @@ void Create::getAttributos() {
             temp+= splittedComando[i][j];
         }
 
-        if(temp.size() ==0) throw invalid_argument("check sintax lalla");
+        if(temp.size() ==0) throw invalid_argument("check sintax");
 
         atributos.push_back(temp);
 
@@ -58,59 +57,59 @@ void Create::getDataTypes() {
     string temp;
 
     bool found = false;
-    int i =4;
-    for(; i < splittedComando.size(); i++){
-        if(splittedComando[i] == WITH){
+    int i = 4;
+    for (; i < splittedComando.size(); i++) {
+        if (splittedComando[i] == WITH) {
             found = true;
             break;
         }
     }
 
-    if(!found) throw invalid_argument("check sintax");
+    if (!found) throw invalid_argument("check sintax");
 
-    found = i+1 < splittedComando.size() && splittedComando[i+1] == TYPES;
-    if(!found) throw invalid_argument("check sintax");
+    found = i + 1 < splittedComando.size() && splittedComando[i + 1] == TYPES;
+    if (!found) throw invalid_argument("check sintax");
 
-    i+=2;
-    for(; i < splittedComando.size(); i++){
+    i += 2;
+    for (; i < splittedComando.size(); i++) {
         temp = "";
-        int j =0;
-        for(; j < splittedComando[i].size(); j++){
-            if(splittedComando[i][j]== ',' ) {
-                if (temp == CHARS || temp == INTEGER || temp == DATE){
+        int j = 0;
+        for (; j < splittedComando[i].size(); j++) {
+            if (splittedComando[i][j] == ',') {
+                if (temp.substr(0, 4) == CHARS || temp == INTEGER || temp == DATE) {
 
-                    if(temp == CHARS){
+                    if (temp == CHARS) {
                         string temp2 = "";
 
                         j++;
-                        if(splittedComando[i][j]!=' [') throw invalid_argument("invalid sintax");
+                        if (splittedComando[i][j] != ' [') throw invalid_argument("invalid sintax");
                         j++;
-                        while(splittedComando[i][j]!= ']'){
-                            temp2+=splittedComando[i][j];
+                        while (splittedComando[i][j] != ']') {
+                            temp2 += splittedComando[i][j];
                             j++;
                         }
 
                         int num = Helpers().getNumber(temp2);
-                        while(num%8!=0) num++;
-                        temp+='[';
-                        temp+=Helpers().stringToNum(num);
-                        temp+=']';
+                        temp += '[';
+                        temp += Helpers().stringToNum(num);
+                        temp += ']';
                     }
                     dataTypes.push_back(temp);
-                }else
+                    temp = "";
+                } else {
                     throw invalid_argument("not valid data-type");
-                temp = "";
-                }else if(splittedComando[i][j]!='(' && splittedComando[i][j] !=')'){
-                temp+=splittedComando[i][j];
+                }
+            } else if (splittedComando[i][j] != '(' && splittedComando[i][j] != ')') {
+                temp += splittedComando[i][j];
             }
 
-            if(splittedComando[i][j] == ')'){
+            if (splittedComando[i][j] == ')') {
                 dataTypes.push_back(temp);
                 return;
             }
+
         }
     }
-
 }
 
 void Create::createTabla() {

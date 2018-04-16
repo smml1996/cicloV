@@ -13,6 +13,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    xInicial: TEdit;
     resultado: TLabel;
     metodosInput: TComboBox;
     ejecutar: TButton;
@@ -68,10 +69,14 @@ var
     with tableOutput do
     for i:=1 to RowCount -1 do begin
       Cells[0,i]:= IntToStr(i);
-      if metodoNum.bolzano(StrToFloat(Cells[1,i]), StrToFloat(Cells[2,i])) then
-         Cells[4,i] :='-'
-      else
+
+      if (metodosInput.ItemIndex = IsBiseccion) or (metodosInput.ItemIndex = isFalsaPosicion) then begin
+         if metodoNum.bolzano(StrToFloat(Cells[1,i]), StrToFloat(Cells[2,i])) then
+            Cells[4,i] :='-'
+         else
           Cells[4,i] := '+';
+
+      end;
 
       if i >=2 then
          Cells[5,i] := FloatToStr(abs(StrToFloat(metodoNum.sequence[i]) - StrToFloat(metodoNum.sequence[i-1])));
@@ -82,19 +87,27 @@ begin
   metodoNum:= MetodosNumericos.Create;
   metodoNum.numericMethod := metodosInput.ItemIndex;
   metodoNum.errorAllowed:= StrToFloat(error.Text);
-  //writeLn(metodoNum.errorAllowed);
-  //metodoNum.a := -34;  //pregunta 4
-  //metodoNum.b := -4;   //pregunta 4
-  //metodoNum.a := 0;//trackMin.Position;
-  //metodoNum.b := 5;//trackMax.Position;
-  metodoNum.a :=-2;
-  metodoNum.b:=-1.6  ;
-  Chart1.Extent.Xmin:= -2;   //pregunta 2
-  Chart1.Extent.Xmax:=-1.6;
-  Chart1.Extent.Xmin:= 0 ;
-  Chart1.Extent.Xmax:= 5;
+  metodoNum.a :=trackMin.Position;
+  metodoNum.b:= trackMax.Position;
+  metodoNum.xInit:= StrToFloat(xInicial.Text);
   temp:= metodoNum.execute();
   //resultado.Caption:= FloatToStr(temp);
+  //primera pregunta a:
+  //chart1LineSeries1.showLines:=false;
+  //chart1lineSeries1.showPoints:=true;
+  //chart1lineSeries1.AddXY(3.2066, metodoNum.f(3.2066));
+  //final primera pregunta a
+
+  //primera 1 pregunta b:
+  //chart1LineSeries1.showLines:= false;
+  //chart1LineSeries1.showPoints:=true;
+  //chart1LineSeries1.AddXY(3.2070, metodoNum.f(3.2070));
+  //final pregunta 1 b
+
+  //tercera pregunta:
+  //chart1LineSeries1.showLines:=false;
+  //chart1LineSeries1.showPoints:=true;
+  //chart1LineSeries1.AddXY(2/3, metodoNum.f(2/3));
   if not isNan(Temp) then begin
     chart1LineSeries1.ShowLines:=false;
     chart1LineSeries1.ShowPoints:=true;

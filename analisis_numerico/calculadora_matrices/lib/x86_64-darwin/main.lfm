@@ -1,0 +1,181 @@
+object Form1: TForm1
+  Left = 295
+  Height = 877
+  Top = 23
+  Width = 1106
+  Caption = 'Form1'
+  ClientHeight = 855
+  ClientWidth = 1106
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object colsMatrix1: TSpinEdit
+    Left = 100
+    Height = 21
+    Top = 118
+    Width = 50
+    MaxValue = 10
+    MinValue = 1
+    OnChange = colsMatrix1Change
+    TabOrder = 0
+    Value = 3
+  end
+  object rowsMatrix1: TSpinEdit
+    Left = 200
+    Height = 21
+    Top = 118
+    Width = 50
+    MaxValue = 10
+    MinValue = 1
+    OnChange = rowsMatrix1Change
+    TabOrder = 1
+    Value = 3
+  end
+  object colsMatrix2: TSpinEdit
+    Left = 651
+    Height = 21
+    Top = 118
+    Width = 50
+    MaxValue = 10
+    MinValue = 1
+    OnChange = colsMatrix2Change
+    TabOrder = 2
+    Value = 3
+  end
+  object rowsMatrix2: TSpinEdit
+    Left = 750
+    Height = 21
+    Top = 118
+    Width = 50
+    MaxValue = 10
+    MinValue = 1
+    OnChange = rowsMatrix2Change
+    TabOrder = 3
+    Value = 3
+  end
+  object matrixA: TStringGrid
+    Left = 72
+    Height = 100
+    Top = 168
+    Width = 200
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 4
+  end
+  object matrixB: TStringGrid
+    Left = 616
+    Height = 100
+    Top = 168
+    Width = 200
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 5
+  end
+  object calcButton: TButton
+    Left = 793
+    Height = 25
+    Top = 39
+    Width = 75
+    Caption = 'calcButton'
+    OnClick = calcular
+    TabOrder = 6
+  end
+  object parametroExtra: TEdit
+    Left = 634
+    Height = 21
+    Top = 42
+    Width = 80
+    TabOrder = 7
+    Text = '0'
+  end
+  object operaciones: TComboBox
+    Left = 450
+    Height = 26
+    Top = 39
+    Width = 100
+    ItemHeight = 19
+    TabOrder = 8
+    Text = 'operaciones'
+  end
+  object resultadoGrid: TStringGrid
+    Left = 296
+    Height = 100
+    Top = 448
+    Width = 200
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 9
+  end
+  object resultadoNumerico: TEdit
+    Left = 893
+    Height = 21
+    Top = 341
+    Width = 80
+    TabOrder = 10
+    Text = 'ponis'
+  end
+  object labelValorVariable: TLabel
+    Left = 24
+    Height = 16
+    Top = 16
+    Width = 187
+    Caption = 'agregar variable x_0 con valor:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 603
+    Height = 16
+    Top = 24
+    Width = 98
+    Caption = 'funcion/escalar:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 96
+    Height = 16
+    Top = 96
+    Width = 63
+    Caption = 'columnas:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 200
+    Height = 16
+    Top = 96
+    Width = 29
+    Caption = 'filas:'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 642
+    Height = 16
+    Top = 96
+    Width = 63
+    Caption = 'columnas:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 752
+    Height = 16
+    Top = 100
+    Width = 29
+    Caption = 'filas:'
+    ParentColor = False
+  end
+  object InputValorVariable: TEdit
+    Left = 200
+    Height = 21
+    Top = 39
+    Width = 80
+    TabOrder = 11
+    Text = '0'
+  end
+  object agregarValorButton: TButton
+    Left = 300
+    Height = 25
+    Top = 39
+    Width = 75
+    Caption = 'agregarValorButton'
+    OnClick = agregarValorButtonClick
+    TabOrder = 12
+  end
+end

@@ -2,6 +2,6 @@
 BEGIN_TABLE
 personas
 id integer
-nombre integer
-apellido integer
+nombre char[10]
+apellido char[10]
 END_TABLES
