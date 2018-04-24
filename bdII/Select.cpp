@@ -52,7 +52,8 @@ void Select::process() {
                 cout<< registro;
 
             }
+            cout << endl;
         }
-        cout << endl;
     }
+    cout << endl;
 }

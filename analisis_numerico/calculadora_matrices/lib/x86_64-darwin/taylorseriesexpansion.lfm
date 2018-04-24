@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 56
+  Height = 877
+  Top = 23
+  Width = 1384
+  Caption = 'Form1'
+  ClientHeight = 855
+  ClientWidth = 1384
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object Chart1: TChart
+    Left = 24
+    Height = 400
+    Top = 32
+    Width = 400
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1FuncSeries1: TFuncSeries
+      OnCalculate = drawFx
+    end
+  end
+  object Label1: TLabel
+    Left = 208
+    Height = 16
+    Top = 8
+    Width = 79
+    Caption = 'primer orden'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 584
+    Height = 16
+    Top = 8
+    Width = 143
+    Caption = 'segundo y tercer orden'
+    ParentColor = False
+  end
+  object Chart2: TChart
+    Left = 456
+    Height = 400
+    Top = 32
+    Width = 400
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart2FuncSeries1: TFuncSeries
+      OnCalculate = segundoOrden
+    end
+  end
+  object Chart3: TChart
+    Left = 928
+    Height = 400
+    Top = 376
+    Width = 400
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart3FuncSeries1: TFuncSeries
+      OnCalculate = cuartoOrden
+    end
+  end
+  object Label3: TLabel
+    Left = 979
+    Height = 16
+    Top = 338
+    Width = 79
+    Caption = 'cuarto orden'
+    ParentColor = False
+  end
+end

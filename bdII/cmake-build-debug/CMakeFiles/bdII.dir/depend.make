@@ -42,5 +42,6 @@ CMakeFiles/bdII.dir/Update.cpp.o: ../Update.cpp
 CMakeFiles/bdII.dir/Update.cpp.o: ../Update.h
 
 CMakeFiles/bdII.dir/main.cpp.o: ../Comando.h
+CMakeFiles/bdII.dir/main.cpp.o: ../Helpers.h
 CMakeFiles/bdII.dir/main.cpp.o: ../main.cpp
 

@@ -9,7 +9,7 @@
 using namespace std;
 
 int Helpers::getNumber(const string  &number){
-    if(number.size() == 0) throw invalid_argument("not a number");
+    if(number.size() == 0) throw invalid_argument("not a number, size = 0");
     int result =0;
 
     int i =0;
@@ -21,6 +21,7 @@ int Helpers::getNumber(const string  &number){
             result+= number.at(i)- '0';
             if(i!= number.size()-1) result*=10;
         }else{
+
             throw invalid_argument("Not a number");
         }
     }
@@ -42,10 +43,9 @@ bool Helpers::isNumber(const string &number){
 
 bool Helpers::isDate(const string &date){
 
-    if(date.size()!=8) return false;
-
+    if(date.size()!=10) return false;
     if(!isNumber(date.substr(0,2)) || !isNumber(date.substr(3,2)) || !isNumber(date.substr(6))) return false;
-    return !(date[2] != '/' || date[5] != '/');
+    return (date[2] == '-' && date[5] == '-');
 }
 
 bool Helpers::isDateLess(const string &date1, const string &date2){
@@ -64,12 +64,15 @@ bool Helpers::isDateGreater(const string &date1, const string &date2){
     return !isDateLess(date1, date2);
 }
 
-string Helpers::stringToNum(const int &num){
+string Helpers::stringToNum(int num){
     string ans = "";
-
+    if( num == 0) return "0";
     while(num>0){
-        ans+= (char) ((num%10) - '0');
+        ans+= (char) ((num%10) + '0');
+        num/=10;
     }
     reverse(ans.begin(), ans.end());
     return ans;
 }
+
+

@@ -91,23 +91,6 @@ begin
   metodoNum.b:= trackMax.Position;
   metodoNum.xInit:= StrToFloat(xInicial.Text);
   temp:= metodoNum.execute();
-  //resultado.Caption:= FloatToStr(temp);
-  //primera pregunta a:
-  //chart1LineSeries1.showLines:=false;
-  //chart1lineSeries1.showPoints:=true;
-  //chart1lineSeries1.AddXY(3.2066, metodoNum.f(3.2066));
-  //final primera pregunta a
-
-  //primera 1 pregunta b:
-  //chart1LineSeries1.showLines:= false;
-  //chart1LineSeries1.showPoints:=true;
-  //chart1LineSeries1.AddXY(3.2070, metodoNum.f(3.2070));
-  //final pregunta 1 b
-
-  //tercera pregunta:
-  //chart1LineSeries1.showLines:=false;
-  //chart1LineSeries1.showPoints:=true;
-  //chart1LineSeries1.AddXY(2/3, metodoNum.f(2/3));
   if not isNan(Temp) then begin
     chart1LineSeries1.ShowLines:=false;
     chart1LineSeries1.ShowPoints:=true;

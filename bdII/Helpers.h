@@ -41,7 +41,7 @@ public:
     static bool isDateLess(const string &date1, const string &date2);
     static bool isDateEqual(const string &date1, const string &date2);
     static bool isDateGreater(const string &date1, const string &date2);
-    static string stringToNum(const int &num);
+    static string stringToNum(int num);
 };
 
 

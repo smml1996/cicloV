@@ -115,8 +115,10 @@ void Comando::processComando(){
             getTokensCondicionLogica(5);
 
 
-            if(tokens.size() > 0)
+            if(tokens.size() > 0){
                 getAnswerCondicionLogica(tokens, 0);
+
+            }
             Interface anInterface(2);
         }else throw invalid_argument("not valid table name");
 
@@ -273,10 +275,8 @@ void Comando::getAnswerCondicionLogica(queue<string> &t, const int &op) {
         f = t.front();
         temp.push(f);
         t.pop();
-
-        if(t.front() == C_AND){
-            getAnswerCondicionLogica(temp, op);
-            t.pop();
+        if(f ==  C_AND){
+            //getAnswerCondicionLogica(temp, op);
             getAnswerCondicionLogica(t,1);
         }else if(t.front()  == ")"){
             count++;
@@ -287,25 +287,26 @@ void Comando::getAnswerCondicionLogica(queue<string> &t, const int &op) {
                 t.pop();
                 getAnswerCondicionLogica(t,op);
             }
-        }else if(t.front() == C_OR){
-            getAnswerCondicionLogica(temp,op);
-            t.pop();
+        }else if(f == C_OR){
+            //getAnswerCondicionLogica(temp,op);
+            //t.pop();
             getAnswerCondicionLogica(t,2);
         }else if(t.front() == ">"){
             t.pop();
-            int indexLeftAtt = getAttributeIndex(t.front()), indexRightAtt = getAttributeIndex(temp.front());
+            int indexLeftAtt = getAttributeIndex(temp.front()), indexRightAtt = getAttributeIndex(t.front());
 
             int leftNumber = -1, rightNumber =-1;
 
             if(indexLeftAtt == -1){
-                leftNumber = Helpers().getNumber(t.front());
+                leftNumber = Helpers().getNumber(temp.front());
             }
 
-            if(indexRightAtt == -1) rightNumber = Helpers().getNumber(temp.front());
+            if(indexRightAtt == -1) rightNumber = Helpers().getNumber(t.front());
 
             bool value;
             for(int i =0; i < registros.size(); i++){
 
+                cout << registros[i][indexLeftAtt] << endl;
                 if(indexLeftAtt != -1){
                     leftNumber = Helpers().getNumber(registros[i][indexLeftAtt]);
                 }
@@ -327,14 +328,14 @@ void Comando::getAnswerCondicionLogica(queue<string> &t, const int &op) {
 
         }else if(t.front() == "<"){
             t.pop();
-            int indexLeftAtt = getAttributeIndex(t.front()), indexRightAtt = getAttributeIndex(temp.front());
+            int indexLeftAtt = getAttributeIndex(temp.front()), indexRightAtt = getAttributeIndex(t.front());
             int leftNumber = -1, rightNumber =-1;
 
             if(indexLeftAtt == -1){
-                leftNumber = Helpers().getNumber(t.front());
+                leftNumber = Helpers().getNumber(temp.front());
             }
 
-            if(indexRightAtt == -1) rightNumber = Helpers().getNumber(temp.front());
+            if(indexRightAtt == -1) rightNumber = Helpers().getNumber(t.front());
 
             bool value;
             for(int i =0; i < registros.size(); i++){
@@ -359,21 +360,22 @@ void Comando::getAnswerCondicionLogica(queue<string> &t, const int &op) {
 
         }else if(t.front() == "="){
             t.pop();
-            int indexLeftAtt = getAttributeIndex(temp.front()), indexRightAtt = getAttributeIndex(t.front());
+            int indexLeftAtt = getAttributeIndex(t.front()), indexRightAtt = getAttributeIndex(temp.front());
 
             int leftNumber = -1, rightNumber =-1;
 
             if(indexLeftAtt == -1){
-                leftNumber = Helpers::getNumber(temp.front());
+                leftNumber = Helpers::getNumber(t.front());
             }
 
 
-            if(indexRightAtt == -1) rightNumber = Helpers::getNumber(t.front());
+            if(indexRightAtt == -1) rightNumber = Helpers::getNumber(temp.front());
 
             bool value;
             for(int i =0; i < registros.size(); i++){
 
                 if(indexLeftAtt != -1){
+
                     leftNumber = Helpers::getNumber(registros[i][indexLeftAtt]);
                 }
 
@@ -418,7 +420,7 @@ void Comando::getDataSizes() {
 
     for(int i =0; i < dataTypes.size(); i++) {
         if ( dataTypes[i] == DATE) {
-            dataSizes.push_back(8);
+            dataSizes.push_back(10);
         }else if(dataTypes[i] == INTEGER ) {
             dataSizes.push_back(11);
         } else {
@@ -451,7 +453,6 @@ void Comando::getRegistros() {
             char empty[]=" ";
             if(strncmp(contents, empty, 1 ) != 0){
                 string temp = contents;
-
                 registros.push_back(vector<string>());
                 int acum=0;
 
@@ -462,7 +463,7 @@ void Comando::getRegistros() {
                     acum+=dataSizes[j];
                         for(int  k = 0; k < temp2.size(); k++){
                             if(temp2[k]!='/'){
-                                final+=temp2[k];
+                                final+= temp2[k];
                             }else{
                                 break;
                             }

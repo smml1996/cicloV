@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Comando.h"
+#include "Helpers.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ int main() {
 
     string tt;
 
+
     char temp;
     while(tt!="exit"){
 
@@ -31,8 +33,6 @@ int main() {
 
         do{
             temp = getchar();
-
-
             tt+=temp;
         }while(temp!=';');
 
@@ -42,6 +42,14 @@ int main() {
         first = true;
 
     }
+
+
+    /*for(int i =0; i < 1000000; i++) {
+        tt = "insert into personas2 (id, nombre, apellido, edad, fecha) values (";
+        tt += Helpers::stringToNum(i);
+        tt += R"(, "nombre", "apellido", 21, 06-12-1996))";
+        Comando c(tt);
+    }*/
 
     return 0;
 }

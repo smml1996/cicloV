@@ -4,15 +4,15 @@ unit operacionesUnarias;
 interface
 
  uses
-     Classes, SysUtils, Graphics,
+     Classes, SysUtils, Graphics,  dialogs,
      FileUtil, Forms, Controls, ExtCtrls,  Grids, Math, variablesH, operacionesBinarias, ParseMath;
      type  arrayReal = array of Real;
      type twoDimensionArr= array of arrayReal;
+     type doubleArr = array of Double;
  type opUnarias = class
-      procedure ejecutar(A: twoDimensionArr; AA: TStringGrid);
+
+      procedure ejecutar(A: twoDimensionArr; AA: TStringGrid; v: doubleArr);
     private
-
-
     function getDeterminante(m: twoDimensionArr): Real;
     function getArrWithoutRowCol(m: twoDimensionArr; rr,cc: Integer) : twoDimensionArr;
     function sumaEscalar(A: twoDimensionArr): twoDimensionArr;
@@ -23,10 +23,8 @@ interface
     function inversa(A: twoDimensionArr): twoDimensionArr;
     function adjunta(A: twoDimensionArr): twoDimensionArr;
     function dividir(A: twoDimensionArr): twoDimensionArr;
-    function jacobiana(A: TStringGrid): twoDimensionArr;
+    function jacobiana(A: TStringGrid; values: doubleArr): twoDimensionArr;
     procedure determinante(A: twoDimensionArr);
-
-
     public
       constructor Create();
 
@@ -56,18 +54,22 @@ begin
 end;
 
 
-function opUnarias.jacobiana(a: TStringGrid): twoDimensionArr;
+function opUnarias.jacobiana(a: TStringGrid; values: doubleArr): twoDimensionArr;
 var
   i, j: Integer;
   parser: TParseMath;
 begin
   parser:= TParseMath.create();
+  showMessage(IntToStr(Length(values)));
   for i:= 0  to length(values)-1 do
     parser.AddVariable('x'+ IntToStr(i), values[i]);
+
   SetLength(Result, a.RowCount, countVariables);
   for i:= 0 to a.RowCount -1 do
-    parser.Expression:= a.Cells[1,i];
+    parser.Expression:= a.Cells[0,i];
     for j:= 0 to countVariables -1 do begin
+      parser.newValue('x'+ IntToStr(j), values[j]);
+      ShowMessage( FloatToStr( values[  j] ) );
       Result[i,j]:= (-1)* parser.evaluate();
       //parser.NewValue('x' + IntToStr(j), values[j] + h);
       //result[i,j]:= (Result[i,j] + parser.evaluate) / h;
@@ -168,10 +170,15 @@ begin
   end;
 end;
 
-procedure opUnarias.ejecutar(A: twoDimensionArr; AA: TStringGrid);
+procedure opUnarias.ejecutar(A: twoDimensionArr; AA: TStringGrid; v: doubleArr);
 var
   i: Integer;
 begin
+  //showMessage('asdf');
+
+  //ShowMessage('1235');
+  //showMessage(IntToStr(length(values)));
+  //setLength(values, length(v));
   case operacionIndex of
     isSumaEscalar:
       begin
@@ -211,7 +218,7 @@ begin
       end;
     isJacobiana:
       begin
-        resultado:= jacobiana(AA);
+        resultado:= jacobiana(AA, v);
       end;
   end;
 end;

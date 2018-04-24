@@ -1,0 +1,111 @@
+object Form1: TForm1
+  Left = 0
+  Height = 877
+  Top = 23
+  Width = 1425
+  Caption = 'Form1'
+  ClientHeight = 855
+  ClientWidth = 1425
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object Chart1: TChart
+    Left = 80
+    Height = 500
+    Top = 128
+    Width = 500
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.Alignment = laBottomCenter
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1FuncSeries1: TFuncSeries
+      Title = 'derivada exacta'
+      OnCalculate = exactFirstOrder
+    end
+    object Chart1FuncSeries2: TFuncSeries
+      Title = 'forward'
+      OnCalculate = forwardFirst
+      Pen.Color = clYellow
+    end
+    object Chart1FuncSeries3: TFuncSeries
+      Title = 'backward'
+      OnCalculate = backwardFirst
+      Pen.Color = clSkyBlue
+    end
+    object Chart1FuncSeries4: TFuncSeries
+      Title = 'centered'
+      OnCalculate = centeredFirst
+      Pen.Color = clPurple
+    end
+  end
+  object Chart2: TChart
+    Left = 800
+    Height = 500
+    Top = 136
+    Width = 500
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.Alignment = laBottomCenter
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart2FuncSeries1: TFuncSeries
+      Title = 'derivada exacta'
+      OnCalculate = segundaExacta
+    end
+    object Chart2FuncSeries2: TFuncSeries
+      Title = 'backward'
+      OnCalculate = backwardSecond
+      Pen.Color = clOlive
+    end
+    object Chart2FuncSeries3: TFuncSeries
+      Title = 'forward'
+      OnCalculate = forwardSecond
+      Pen.Color = clMoneyGreen
+    end
+    object Chart2FuncSeries4: TFuncSeries
+      Title = 'centered'
+      OnCalculate = centeredSecond
+      Pen.Color = clAqua
+    end
+  end
+  object Label1: TLabel
+    Left = 264
+    Height = 16
+    Top = 88
+    Width = 161
+    Caption = 'derivadas de primer orden'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 968
+    Height = 16
+    Top = 96
+    Width = 174
+    Caption = 'derivadas de segundo orden'
+    ParentColor = False
+  end
+end

@@ -105,9 +105,9 @@ begin
   //final pregunta 1 b
 
   //tercera pregunta:
-  chart1LineSeries1.showLines:=false;
-  chart1LineSeries1.showPoints:=true;
-  chart1LineSeries1.AddXY(2/3, metodoNum.f(2/3));
+  //chart1LineSeries1.showLines:=false;
+  //chart1LineSeries1.showPoints:=true;
+  //chart1LineSeries1.AddXY(2/3, metodoNum.f(2/3));
   if not isNan(Temp) then begin
     chart1LineSeries1.ShowLines:=false;
     chart1LineSeries1.ShowPoints:=true;

@@ -1,0 +1,124 @@
+object Form1: TForm1
+  Left = 15
+  Height = 742
+  Top = 28
+  Width = 1418
+  Caption = 'Form1'
+  ClientHeight = 720
+  ClientWidth = 1418
+  OnCreate = onCreate
+  LCLVersion = '1.8.0.6'
+  object Label1: TLabel
+    Left = 136
+    Height = 16
+    Top = 45
+    Width = 13
+    Caption = 'A:'
+    ParentColor = False
+  end
+  object inputA: TEdit
+    Left = 156
+    Height = 21
+    Top = 40
+    Width = 80
+    TabOrder = 0
+    Text = '0'
+  end
+  object Label2: TLabel
+    Left = 352
+    Height = 16
+    Top = 45
+    Width = 12
+    Caption = 'B:'
+    ParentColor = False
+  end
+  object inputB: TEdit
+    Left = 369
+    Height = 21
+    Top = 40
+    Width = 80
+    TabOrder = 1
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 1200
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = 'ejecutar'
+    OnClick = ejecutar
+    TabOrder = 2
+  end
+  object functionInput: TEdit
+    Left = 603
+    Height = 21
+    Top = 40
+    Width = 80
+    TabOrder = 3
+    Text = 'x'
+  end
+  object StringGrid1: TStringGrid
+    Left = 32
+    Height = 500
+    Top = 88
+    Width = 1350
+    ColCount = 6
+    FixedRows = 0
+    RowCount = 1
+    TabOrder = 4
+    ColWidths = (
+      119
+      118
+      266
+      195
+      230
+      201
+    )
+    Cells = (
+      6
+      0
+      0
+      'a'
+      1
+      0
+      'b'
+      2
+      0
+      'error porcentual'
+      3
+      0
+      'error estimado'
+      4
+      0
+      'error verdadero'
+      5
+      0
+      '|error estimado| * 100'
+    )
+  end
+  object Label3: TLabel
+    Left = 544
+    Height = 16
+    Top = 45
+    Width = 49
+    Caption = 'función:'
+    ParentColor = False
+  end
+  object metodoInput: TComboBox
+    Left = 784
+    Height = 26
+    Top = 40
+    Width = 100
+    ItemHeight = 19
+    TabOrder = 5
+    Text = 'métodos'
+  end
+  object errorPorcInput: TEdit
+    Left = 998
+    Height = 21
+    Top = 41
+    Width = 80
+    TabOrder = 6
+    Text = '10'
+  end
+end

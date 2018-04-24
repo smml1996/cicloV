@@ -161,6 +161,7 @@ end;
 
 Procedure TParseMath.AddFunctions();
 begin
+
    with FParser.Identifiers do begin
        AddFunction('tan', 'F', 'F', @ExprTan);
        AddFunction('sin', 'F', 'F', @ExprSin);
@@ -195,4 +196,3 @@ begin
 end;
 
 end.
-

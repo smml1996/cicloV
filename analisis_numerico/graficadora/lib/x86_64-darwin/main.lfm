@@ -1,0 +1,233 @@
+object Form1: TForm1
+  Left = 147
+  Height = 704
+  Top = 98
+  Width = 1145
+  Caption = 'Form1'
+  ClientHeight = 704
+  ClientWidth = 1145
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object Chart1: TChart
+    Left = 48
+    Height = 600
+    Top = 40
+    Width = 600
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1FuncSeries1: TFuncSeries
+      OnCalculate = calculateFunction
+    end
+    object Chart1ConstantLine1: TConstantLine
+      Position = 0
+    end
+    object Chart1ConstantLine2: TConstantLine
+      LineStyle = lsVertical
+      Position = 0
+    end
+  end
+  object Label1: TLabel
+    Left = 704
+    Height = 16
+    Top = 56
+    Width = 103
+    Caption = 'Ingresar función:'
+    ParentColor = False
+  end
+  object inputFunction: TEdit
+    Left = 796
+    Height = 21
+    Top = 95
+    Width = 80
+    TabOrder = 1
+    Text = 'x'
+  end
+  object Label2: TLabel
+    Left = 744
+    Height = 16
+    Top = 165
+    Width = 61
+    Caption = 'X mínimo:'
+    ParentColor = False
+  end
+  object inputXmin: TEdit
+    Left = 843
+    Height = 21
+    Top = 160
+    Width = 80
+    TabOrder = 2
+    Text = '0'
+  end
+  object buttonActualizarMinimo: TButton
+    Left = 996
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'actualizar '
+    OnClick = actualizarXMin
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 744
+    Height = 16
+    Top = 211
+    Width = 64
+    Caption = 'X máximo:'
+    ParentColor = False
+  end
+  object inputXMax: TEdit
+    Left = 843
+    Height = 21
+    Top = 206
+    Width = 80
+    TabOrder = 4
+    Text = '100'
+  end
+  object Button1: TButton
+    Left = 996
+    Height = 25
+    Top = 206
+    Width = 75
+    Caption = 'actualizar'
+    OnClick = actualizarXMax
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 950
+    Height = 25
+    Top = 95
+    Width = 75
+    Caption = 'agregar'
+    OnClick = addFunction
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 1000
+    Height = 25
+    Top = 30
+    Width = 75
+    Caption = 'limpiar'
+    TabOrder = 7
+  end
+  object Label4: TLabel
+    Left = 712
+    Height = 16
+    Top = 288
+    Width = 86
+    Caption = 'agregar recta:'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 776
+    Height = 16
+    Top = 344
+    Width = 17
+    Caption = 'X='
+    ParentColor = False
+  end
+  object inputXRecta: TEdit
+    Left = 800
+    Height = 21
+    Top = 340
+    Width = 80
+    TabOrder = 8
+    Text = '0'
+  end
+  object Button4: TButton
+    Left = 975
+    Height = 25
+    Top = 340
+    Width = 75
+    Caption = 'agregar'
+    OnClick = agregarRectaVertical
+    TabOrder = 9
+  end
+  object Label6: TLabel
+    Left = 777
+    Height = 16
+    Top = 384
+    Width = 16
+    Caption = 'Y='
+    ParentColor = False
+  end
+  object inputYRecta: TEdit
+    Left = 800
+    Height = 21
+    Top = 380
+    Width = 80
+    TabOrder = 10
+    Text = '0'
+  end
+  object Button5: TButton
+    Left = 975
+    Height = 25
+    Top = 380
+    Width = 75
+    Caption = 'agregar'
+    OnClick = agregarRectaHorizontal
+    TabOrder = 11
+  end
+  object Label7: TLabel
+    Left = 712
+    Height = 16
+    Top = 440
+    Width = 90
+    Caption = 'agregar punto:'
+    ParentColor = False
+  end
+  object Button6: TButton
+    Left = 858
+    Height = 25
+    Top = 554
+    Width = 75
+    Caption = 'agregar'
+    OnClick = agregarPunto
+    TabOrder = 12
+  end
+  object inputXPunto: TEdit
+    Left = 780
+    Height = 21
+    Top = 496
+    Width = 80
+    TabOrder = 13
+    Text = '0'
+  end
+  object Label8: TLabel
+    Left = 752
+    Height = 16
+    Top = 496
+    Width = 13
+    Caption = 'X:'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 921
+    Height = 16
+    Top = 500
+    Width = 12
+    Caption = 'Y:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 950
+    Height = 21
+    Top = 500
+    Width = 80
+    TabOrder = 14
+    Text = '0'
+  end
+end

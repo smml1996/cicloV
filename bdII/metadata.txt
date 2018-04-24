@@ -5,3 +5,19 @@ id integer
 nombre char[10]
 apellido char[10]
 END_TABLES
+BEGIN_TABLE
+personas1
+id integer
+nombre char[20]
+apellido char[20]
+edad integer
+fecha date
+END_TABLES
+BEGIN_TABLE
+personas2
+id integer
+nombre char[10]
+apellido char[15]
+edad integer
+fecha date
+END_TABLES

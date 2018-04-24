@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids, Spin,
-  StdCtrls, operacionesUnarias, operacionesBinarias, variablesH;
+  StdCtrls, algebraMatrices, variablesH;
 
 type
 
@@ -41,9 +41,9 @@ type
     procedure rowsMatrix2Change(Sender: TObject);
     procedure fillMatrix(m: twoDimensionArr; isA: Boolean);
     procedure fillResultMatrix;
+    procedure fillFunctionArray;
   private
-    oUnaria: opUnarias;
-    oBinaria: operacionesBin;
+    algMatrices: MatrixAlgebra;
 
   public
 
@@ -57,13 +57,17 @@ implementation
 
 var
   i,j: Integer;
-  A:twoDimensionArr;
-  B: twoDimensionArr;
 
 {$R *.lfm}
 
 { TForm1 }
 
+procedure TForm1.fillFunctionArray;
+begin
+  setLength(functionArray, matrixA.rowCount);
+  for i:=0 to MatrixA.rowCount -1 do
+    functionArray[i]:= matrixA.Cells[0,i];
+end;
 procedure TForm1.fillResultMatrix;
 begin
   resultadoGrid.clear;
@@ -91,7 +95,6 @@ procedure TForm1.colsMatrix1Change(Sender: TObject);
 begin
   matrixA.clear;
   matrixA.colCount:= colsMatrix1.Value;
-  SetLength(values, 0);
 end;
 
 procedure TForm1.calcular(Sender: TObject);
@@ -102,21 +105,22 @@ begin
      columnasA:= colsMatrix1.Value;
      SetLength(A, filasA, columnasA);
      fillMatrix(A, True);
-  end;
-  if operaciones.ItemIndex <=9 then begin
-    if operacionIndex <> 9 then
-      escalar:= StrToFloat(parametroExtra.Text);
-    oUnaria.ejecutar(A, matrixA);
-    if operaciones.ItemIndex = 8 then
-      resultadoNumerico.Text:= FloatToStr(r);
+     escalar:= StrToFloat(parametroExtra.Text);
   end
-  else begin
+  else
+  begin
+    fillFunctionArray;
+  end;
+
+  if (operacionIndex > 9)  and (operacionIndex < 14)then begin
     filasB:= rowsMatrix2.Value;
     columnasB:= colsMatrix2.Value;
     SetLength(B, filasB, columnasB);
     fillMatrix(B, False);
-    oBinaria.ejecutar(A,B);
   end;
+  algMatrices.ejecutar;
+  if (operaciones.ItemIndex = 8) or operaciones.ItemIndex = 14 then
+    resultadoNumerico.Text:= FloatToStr(resultadoEscalar);
   filasRes:= length(resultado);
   colsRes:= length(resultado[0]);
   fillResultMatrix;
@@ -127,12 +131,11 @@ end;
 
 procedure TForm1.agregarValorButtonClick(Sender: TObject);
 begin
-  //parser.AddVariable('x_' + IntToStr(countVariables), StrToFloat(InputValorVariable.Text));
-  //oUnaria.parser.NewValue('x_' + IntToStr(countVariables), StrToFloat(InputValorVariable.Text));
   SetLength(values, length(values) +1);
   values[length(values)-1] := StrToFloat(InputValorVariable.Text);
   countVariables:= countVariables+1;
-  labelValorVariable.Caption := 'agregar variable x_ '+ IntToStr(countVariables) + ' con valor: ';
+  ShowMessage(IntToStr(length(values)-1) + LineEnding + FloatToStr(values[length(values)-1]));
+  labelValorVariable.Caption := 'agregar variable x'+ IntToStr(countVariables) + ' con valor: ';
 end;
 
 procedure TForm1.colsMatrix2Change(Sender: TObject);
@@ -143,9 +146,8 @@ end;
 
 procedure TForm1.OnCreate(Sender: TObject);
 begin
-  oUnaria.create;
-  setLength(values,1);
-  operacionesBin.create;
+  setLength(values,0);
+  algMatrices.create;
      matrixB.Options:= matrixB.Options + [goEditing];
      matrixA.Options:= matrixA.Options + [goEditing];
      operacionesList := TStringList.create;
@@ -162,6 +164,9 @@ begin
      operacionesList.AddObject('Suma', TObject(isSuma));
      operacionesList.AddObject('Resta', TObject(isResta));
      operacionesList.AddObject('multiplicacion', TObject(isMult));
+     operacionesList.AddObject('division binaria', TObject(isDivisionBinaria));
+     operacionesList.AddObject('traza', TObject(isTraza));
+     operacionesList.AddObject('triangularizacion', TObject(isMatrizTriangular));
      operaciones.Items.Assign(operacionesList);
      matrixA.clear;
      matrixA.rowCount:= rowsMatrix1.Value;
