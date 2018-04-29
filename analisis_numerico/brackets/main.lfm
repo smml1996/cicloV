@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 15
-  Height = 742
-  Top = 28
+  Left = 5
+  Height = 764
+  Top = 103
   Width = 1418
   Caption = 'Form1'
-  ClientHeight = 720
+  ClientHeight = 742
   ClientWidth = 1418
   OnCreate = onCreate
   LCLVersion = '1.8.0.6'
@@ -120,5 +120,22 @@ object Form1: TForm1
     Width = 80
     TabOrder = 6
     Text = '10'
+  end
+  object Button2: TButton
+    Left = 787
+    Height = 25
+    Top = 665
+    Width = 75
+    Caption = 'Test'
+    OnClick = probar
+    TabOrder = 7
+  end
+  object testInput: TEdit
+    Left = 658
+    Height = 21
+    Top = 665
+    Width = 80
+    TabOrder = 8
+    Text = '0'
   end
 end

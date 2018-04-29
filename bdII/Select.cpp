@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "Select.h"
-
+#include "stdio.h"
 
 void Select::displayAttributes() {
 
@@ -37,23 +37,18 @@ void Select::process() {
             for(int j =0; j< registros[i].size(); j++){
                 registro ="";
 
-                temp = dataSizes[i]- registros[i][j].size();
-                if(temp%2!=0) temp+=1;
-                temp+=4;
-                temp/=2;
+ //               temp = dataSizes[i]- registros[i][j].size();
+ //               if(temp%2!=0) temp+=1;
+ //               temp+=4;
+ //               temp/=2;
 
-                for(int k =0; k< temp; k++){
-                    registro+=" ";
-                }
-                registro+= registros[i][j];
-                for(int k =0; k< temp+1; k++){
-                    registro+=" ";
-                }
-                cout<< registro;
+                registro+= registros[i][j] + " ";
+                cout << registro;
 
             }
             cout << endl;
         }
+
     }
     cout << endl;
 }

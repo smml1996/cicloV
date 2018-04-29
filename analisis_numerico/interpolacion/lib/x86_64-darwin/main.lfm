@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 60
+  Height = 859
+  Top = 132
+  Width = 1366
+  Caption = 'Form1'
+  ClientHeight = 837
+  ClientWidth = 1366
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object Label1: TLabel
+    Left = 160
+    Height = 16
+    Top = 36
+    Width = 11
+    Caption = 'x:'
+    ParentColor = False
+  end
+  object inputAgregarX: TEdit
+    Left = 189
+    Height = 21
+    Top = 33
+    Width = 80
+    TabOrder = 0
+    Text = '1'
+  end
+  object Label2: TLabel
+    Left = 384
+    Height = 16
+    Top = 32
+    Width = 11
+    Caption = 'y:'
+    ParentColor = False
+  end
+  object inputAgregarY: TEdit
+    Left = 409
+    Height = 21
+    Top = 31
+    Width = 80
+    TabOrder = 1
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 575
+    Height = 25
+    Top = 29
+    Width = 75
+    Caption = 'Agregar'
+    OnClick = AgregarDato
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 1186
+    Height = 25
+    Top = 30
+    Width = 75
+    Caption = 'predecir'
+    OnClick = predecir
+    TabOrder = 3
+  end
+  object inputEvalX: TEdit
+    Left = 879
+    Height = 21
+    Top = 31
+    Width = 80
+    TabOrder = 4
+    Text = '0'
+  end
+  object inputEvalY: TEdit
+    Left = 1044
+    Height = 21
+    Top = 31
+    Width = 80
+    TabOrder = 5
+    Text = '0'
+  end
+  object Label3: TLabel
+    Left = 848
+    Height = 16
+    Top = 32
+    Width = 11
+    Caption = 'x:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 1016
+    Height = 16
+    Top = 32
+    Width = 11
+    Caption = 'y:'
+    ParentColor = False
+  end
+  object StringGrid1: TStringGrid
+    Left = 138
+    Height = 500
+    Top = 133
+    Width = 280
+    ColCount = 3
+    FixedCols = 0
+    TabOrder = 6
+    Cells = (
+      3
+      0
+      0
+      'n'
+      1
+      0
+      'x'
+      2
+      0
+      'y'
+    )
+  end
+  object Label5: TLabel
+    Left = 616
+    Height = 16
+    Top = 88
+    Width = 125
+    Caption = 'grado del polinomio:'
+    ParentColor = False
+  end
+  object inputGradoPolinomio: TEdit
+    Left = 780
+    Height = 21
+    Top = 81
+    Width = 80
+    TabOrder = 7
+    Text = '4'
+  end
+end

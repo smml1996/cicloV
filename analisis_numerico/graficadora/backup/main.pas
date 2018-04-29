@@ -94,13 +94,21 @@ begin
 end;
 
 procedure TForm1.calculateFunction(const AX: Double; out AY: Double);
+var
+  ta : double;
 begin
+
+  ta := AX + 273.15;
   //parser.NewValue('x', AX);
-   //AY:= parser.Evaluate();
-  if AX >=0 then
-   AY:= AX*AX*abs(cos(sqrt(AX))) -5
-  else
-  AY:= 0;
+  //AY:= parser.Evaluate();
+
+  AY:= -139.34411 + (1.575701 * power(10,5))/ ta;
+  AY:= AY - (6.642308 * power(10,7)) / (power(ta,2));
+  AY:= AY + (1.2438 * power(10,10)) / power(ta,3);
+  AY:= AY - (8.621949 * power(10,11)) / (power(ta,4));
+  AY:= AY - ln(8);
+
+
 end;
 
 procedure TForm1.OnCreate(Sender: TObject);

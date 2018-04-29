@@ -44,10 +44,11 @@ procedure TForm1.ejecutar(Sender: TObject);
 var
   metodo: bracketMethod;
 begin
-  metodo:= bracketMethod.OnCreate(functionInput, StrToFloat(inputA.Text), StrToFloat(inputB.Text), (StrToFloat(errorPorcInput.Text)/100.00));
+  metodo:= bracketMethod.OnCreate(functionInput.text, StrToFloat(inputA.Text), StrToFloat(inputB.Text), (StrToFloat(errorPorcInput.Text)/100.00));
 
   metodo.execute(metodoInput.ItemIndex);
   with StringGrid1 do begin
+    RowCount:= metodo.sequence.Count;
     cols[0].Assign(metodo.minimumsList);
     cols[1].Assign(metodo.maximumsList);
     cols[2].Assign(metodo.sequence);
@@ -57,9 +58,14 @@ begin
 end;
 
 procedure TForm1.onCreate(Sender: TObject);
+var
+  metodosList: TStringList;
 begin
-  metodoInput.AddObject('Bisección', TObject(isBiseccion));
-  metodoInput.AddObject('Falsa Posición', TObject(isFalsaPosicion));
+  metodosList:= TStringList.create;
+  metodosList.AddObject('Bisección', TObject(isBiseccion));
+  metodosList.AddObject('Falsa Posición', TObject(isFalsaPosicion));
+
+  metodoInput.Items.Assign(metodosList);
 end;
 
 end.

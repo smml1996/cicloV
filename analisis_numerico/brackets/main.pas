@@ -14,6 +14,8 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
+    testInput: TEdit;
     errorPorcInput: TEdit;
     metodoInput: TComboBox;
     functionInput: TEdit;
@@ -25,6 +27,7 @@ type
     StringGrid1: TStringGrid;
     procedure ejecutar(Sender: TObject);
     procedure onCreate(Sender: TObject);
+    procedure probar(Sender: TObject);
   private
 
   public
@@ -46,7 +49,7 @@ var
 begin
   metodo:= bracketMethod.OnCreate(functionInput.text, StrToFloat(inputA.Text), StrToFloat(inputB.Text), (StrToFloat(errorPorcInput.Text)/100.00));
 
-  metodo.execute(metodoInput.ItemIndex);
+  testInput.text := FloatToStr(metodo.execute(metodoInput.ItemIndex));
   with StringGrid1 do begin
     RowCount:= metodo.sequence.Count;
     cols[0].Assign(metodo.minimumsList);
@@ -64,8 +67,19 @@ begin
   metodosList:= TStringList.create;
   metodosList.AddObject('Bisección', TObject(isBiseccion));
   metodosList.AddObject('Falsa Posición', TObject(isFalsaPosicion));
-
+  metodosList.AddObject('Bisecc. Eval. Min', TObject(isBiseccionMin));
+  metodosList.AddObject('Fal. Pos. Eval. Min', TObject(isFalseMin));
+  metodosList.AddObject('falsa pos. mod.', TObject(isModifiedFalse));
   metodoInput.Items.Assign(metodosList);
+end;
+
+procedure TForm1.probar(Sender: TObject);
+var
+  metodo: bracketMethod;
+begin
+  metodo:= bracketMethod.OnCreate(functionInput.Text, 0,0,5);
+  metodo.test(StrToFloat(testInput.text));
+
 end;
 
 end.

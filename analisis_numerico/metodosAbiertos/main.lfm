@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 90
+  Height = 774
+  Top = 73
+  Width = 1252
+  Caption = 'Form1'
+  ClientHeight = 774
+  ClientWidth = 1252
+  OnCreate = OnCreate
+  LCLVersion = '1.8.0.6'
+  object Label1: TLabel
+    Left = 63
+    Height = 16
+    Top = 33
+    Width = 20
+    Caption = 'X0:'
+    ParentColor = False
+  end
+  object inputX0: TEdit
+    Left = 113
+    Height = 21
+    Top = 30
+    Width = 80
+    TabOrder = 0
+    Text = '0'
+  end
+  object StringGrid1: TStringGrid
+    Left = 51
+    Height = 500
+    Top = 123
+    Width = 1500
+    TabOrder = 1
+    ColWidths = (
+      76
+      392
+      359
+      305
+      64
+    )
+    Cells = (
+      4
+      0
+      0
+      'iteracion'
+      1
+      0
+      'Xn'
+      2
+      0
+      'error estimado'
+      3
+      0
+      'error real'
+    )
+  end
+  object inputMetodo: TComboBox
+    Left = 900
+    Height = 26
+    Top = 29
+    Width = 100
+    ItemHeight = 19
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 240
+    Height = 16
+    Top = 33
+    Width = 59
+    Caption = 'Error (%):'
+    ParentColor = False
+  end
+  object inputError: TEdit
+    Left = 324
+    Height = 21
+    Top = 30
+    Width = 80
+    TabOrder = 3
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 1100
+    Height = 25
+    Top = 32
+    Width = 75
+    Caption = 'ejecutar'
+    OnClick = ejecutarMetodo
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    Left = 474
+    Height = 16
+    Top = 33
+    Width = 49
+    Caption = 'función:'
+    ParentColor = False
+  end
+  object inputFuncion: TEdit
+    Left = 550
+    Height = 21
+    Top = 33
+    Width = 300
+    Constraints.MinWidth = 300
+    TabOrder = 5
+    Text = 'x'
+  end
+  object inputRespuesta: TEdit
+    Left = 418
+    Height = 21
+    Top = 707
+    Width = 80
+    TabOrder = 6
+    Text = '0'
+  end
+  object Label4: TLabel
+    Left = 336
+    Height = 16
+    Top = 707
+    Width = 72
+    Caption = 'Respuesta: '
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 558
+    Height = 25
+    Top = 705
+    Width = 75
+    Caption = 'VERIFICAR'
+    OnClick = verificarRespuesta
+    TabOrder = 7
+  end
+  object Label5: TLabel
+    Left = 928
+    Height = 16
+    Top = 707
+    Width = 86
+    Caption = 'multiplicidad: '
+    ParentColor = False
+  end
+  object inputMultiplicity: TEdit
+    Left = 1020
+    Height = 21
+    Top = 706
+    Width = 80
+    TabOrder = 8
+    Text = '1'
+  end
+end
