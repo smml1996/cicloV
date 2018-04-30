@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="interpolacionProject.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -19,7 +19,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="33"/>
         <CursorPos X="64" Y="70"/>
         <UsageCount Value="25"/>
@@ -30,12 +30,18 @@
         <Filename Value="algoritmointerpolaciones.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="algoritmoInterpolaciones"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="62"/>
         <CursorPos Y="87"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="../tareaTaylor/backup/project1.lpr"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit3>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>

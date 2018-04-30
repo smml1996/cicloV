@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -19,18 +19,20 @@
         <ComponentName Value="formGeneral"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="19" Y="115"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="64"/>
+        <CursorPos X="33" Y="78"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="class_taylor.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="50" Y="171"/>
-        <UsageCount Value="32"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="227"/>
+        <CursorPos X="52" Y="251"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -38,14 +40,13 @@
         <ComponentName Value="frmTaylor"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
         <CursorPos X="40" Y="61"/>
         <UsageCount Value="16"/>
-        <Loaded Value="True"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="22" HistoryIndex="21">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="27" Column="23"/>
@@ -75,65 +76,73 @@
         <Caret Line="42" Column="3"/>
       </Position7>
       <Position8>
-        <Filename Value="../../../../Downloads/Taylor/maintaylor.pas"/>
-        <Caret Line="61" Column="40" TopLine="3"/>
-      </Position8>
-      <Position9>
         <Filename Value="main.pas"/>
         <Caret Line="9" Column="38" TopLine="3"/>
+      </Position8>
+      <Position9>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="32" Column="11"/>
       </Position9>
       <Position10>
         <Filename Value="class_taylor.pas"/>
-        <Caret Line="32" Column="11"/>
+        <Caret Line="88" Column="5" TopLine="65"/>
       </Position10>
       <Position11>
         <Filename Value="class_taylor.pas"/>
-        <Caret Line="88" Column="5" TopLine="65"/>
+        <Caret Line="90" Column="35" TopLine="69"/>
       </Position11>
       <Position12>
         <Filename Value="class_taylor.pas"/>
-        <Caret Line="90" Column="35" TopLine="69"/>
+        <Caret Line="105" Column="18" TopLine="77"/>
       </Position12>
       <Position13>
         <Filename Value="class_taylor.pas"/>
-        <Caret Line="105" Column="18" TopLine="77"/>
+        <Caret Line="246" Column="12" TopLine="221"/>
       </Position13>
       <Position14>
         <Filename Value="class_taylor.pas"/>
-        <Caret Line="246" Column="12" TopLine="221"/>
+        <Caret Line="272" Column="17" TopLine="247"/>
       </Position14>
       <Position15>
-        <Filename Value="class_taylor.pas"/>
-        <Caret Line="272" Column="17" TopLine="247"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="86" Column="35" TopLine="61"/>
       </Position15>
       <Position16>
         <Filename Value="main.pas"/>
-        <Caret Line="86" Column="35" TopLine="61"/>
+        <Caret Line="106" Column="20" TopLine="74"/>
       </Position16>
       <Position17>
         <Filename Value="main.pas"/>
-        <Caret Line="106" Column="20" TopLine="74"/>
+        <Caret Line="110" Column="25" TopLine="75"/>
       </Position17>
       <Position18>
         <Filename Value="main.pas"/>
-        <Caret Line="110" Column="25" TopLine="75"/>
+        <Caret Line="92" Column="45" TopLine="74"/>
       </Position18>
       <Position19>
-        <Filename Value="main.pas"/>
-        <Caret Line="92" Column="45" TopLine="74"/>
-      </Position19>
-      <Position20>
         <Filename Value="class_taylor.pas"/>
         <Caret Line="118" Column="79" TopLine="103"/>
-      </Position20>
-      <Position21>
+      </Position19>
+      <Position20>
         <Filename Value="main.pas"/>
         <Caret Line="103" Column="20" TopLine="75"/>
-      </Position21>
-      <Position22>
+      </Position20>
+      <Position21>
         <Filename Value="class_taylor.pas"/>
         <Caret Line="17" Column="13"/>
+      </Position21>
+      <Position22>
+        <Filename Value="main.pas"/>
+        <Caret Line="91" Column="42" TopLine="77"/>
       </Position22>
+      <Position23>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="125" Column="47" TopLine="94"/>
+      </Position23>
+      <Position24>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="251" Column="49" TopLine="230"/>
+      </Position24>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

@@ -5,7 +5,7 @@ unit class_taylor;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, Dialogs,SysUtils;
 
 type
   TTaylor = class
@@ -28,6 +28,7 @@ type
       function cosh(): Real;
       function tanhInverse(): Real;
       function geometrica(): Real;
+      procedure simplifyAngle;
 
     public
       constructor create;
@@ -65,6 +66,11 @@ begin
   Sequence.Destroy;
 end;
 
+
+procedure TTaylor.simplifyAngle;
+begin
+  angle:= angle - 2*pi *trunc(angle/(2*pi));
+end;
 function TTaylor.Execute() : Real;
 begin
 
@@ -113,7 +119,7 @@ var xn: Real;
 begin
   Result:= 0;
   n:=0;
-
+  simplifyAngle;
   repeat
      xn := Result;
      Result := Result + power(-1, n)/factorial(2*n+1)* power(Angle, (2*n) +1);
@@ -121,7 +127,9 @@ begin
           error:= abs(Result-xn);
      sequence.Add(FloatToStr(Result));
      n:= n+1;
-  until (error<= ErrorAllowed) or (n >= Top);
+  until (error<= ErrorAllowed) or (n >= 50);
+  if n = 100 then
+       ShowMessage('50 iterations achieved');
 end;
 
 function TTaylor.cos(): Real;
@@ -131,6 +139,7 @@ var xn: Real;
 begin
   Result:= 0;
   n:= 0;
+  simplifyAngle;
 
   repeat
      xn := Result;
@@ -148,6 +157,10 @@ var xn: Real;
 begin
      result:= 0;
      n:= 0;
+     if abs(angle) >= 1 then begin
+          ShowMessage('input invalido, |x| >=1');
+          n:= Top;
+     end;
      repeat
         xn := Result;
         Result:= Result + (    power(-1, n) * factorial(2*n)*power(Angle, 2*n+1))/ (power(4, n) * power(factorial(n),2) * (2*n+1));
@@ -155,7 +168,9 @@ begin
              error:= abs(Result - xn);
         sequence.Add(FloatToStr(Result));
         n:= n+1;
-     until(error <= ErrorAllowed) or (n>= Top);
+     until(error <= ErrorAllowed) or (n>= 100);
+     if n = 100 then
+          ShowMessage('100 iterations achieved');
 end;
 
 function TTaylor.ln(): Real;
@@ -164,6 +179,10 @@ var xn: Real;
 begin
   result:=0;
   n:=1;
+  if x  <= 0  then begin
+    ShowMessage('input invalido');
+     n:= Top;
+  end;
   repeat
      xn:= Result;
      Result:= Result+ power(-1, n+1)* power(x, n)/ n;
@@ -180,6 +199,10 @@ var xn: Real;
 begin
      Result:= 0;
      n:= 0;
+     if abs(angle) >= 1 then begin
+          ShowMessage('input invalido, |x| >=1');
+          n:= Top;
+     end;
     repeat
       xn:= Result;
       Result:= Result + (factorial(2*n)) / (power(4, n) * power(factorial(n),2)*(2*n+1)) * power(Angle, 2*n+1);
@@ -196,6 +219,10 @@ var xn: Real;
 begin
   Result:= 0;
   n:= 0;
+  if abs(angle) >= 1 then begin
+       ShowMessage('input invalido, |x| >=1');
+       n:= Top;
+  end;
   repeat
     xn:= Result;
     Result:= Result + power(-1, n) * power(Angle, 2*n+1)/(2*n+1);
@@ -244,6 +271,10 @@ function TTaylor.tanhInverse(): Real;
 var xn: Real;
     n: Integer;
 begin
+  if abs(angle) >= (pi/2) then begin
+       ShowMessage('input invalido, |x| >=1');
+       n:= Top;
+  end;
   Result:= 0;
   n:= 0;
   repeat
@@ -263,6 +294,10 @@ var xn: Real;
 begin
   Result:= 0.0;
   n:= 0;
+  if abs(x) >= 1 then begin
+       ShowMessage('input invalido, |x| >=1');
+       n:= Top;
+  end;
   repeat
         xn:= Result;
         Result:= Result + a*power(x, n);
@@ -274,28 +309,3 @@ begin
 end;
 
 end.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-end.
-

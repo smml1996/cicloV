@@ -14,10 +14,10 @@ type
     functionType: Integer;
     AngleType: Integer;
     x: Real;
-    a:Real;
+    a, Angle:Real;
     function Execute(): Real;
-    private:
-      error, temp, Angle: Real;
+    private
+      error, temp: Real;
       function sen(): Real;
       function cos(): Real;
       function asinh():Real;
@@ -29,10 +29,11 @@ type
       function tanhInverse(): Real;
       function geometrica(): Real;
 
-    public:
+    public
       constructor create;
       destructor Destroy; override;
   end;
+
   const
     IsSin= 0;
     IsCos= 1;
@@ -85,9 +86,9 @@ begin
        isTanhInverse: Result:= tanhInverse();
        isGeometrica: Result:= geometrica();
   end;
-end
+end;
 
-function power(b: Real; n: Real): Real;
+function power(b: Real; n: Integer): Real;
 var i: Integer;
 begin
    Result:=1;
@@ -97,12 +98,12 @@ end;
 
 function factorial(n: Integer): Integer;
 begin
-  if n > 1 then
-     Result:= n * factorial(n-1);
-  else if n = 0 then
-       Result:= 1;
-  else
-      Result:= 0;
+     if n>1 then
+        Result:= n * factorial(n-1)
+     else if n>=0 then
+        Result:= 1
+     else
+       Result:= 0;
 end;
 
 function TTaylor.sen(): Real;
@@ -115,7 +116,7 @@ begin
 
   repeat
      xn := Result;
-     Result := Result + power(-1, n)* power(Angle, (2*n) +1)/factorial(2*n +1);
+     Result := Result + power(-1, n)/factorial(2*n+1)* power(Angle, (2*n) +1);
      if n > 0 then
           error:= abs(Result-xn);
      sequence.Add(FloatToStr(Result));
@@ -126,7 +127,6 @@ end;
 function TTaylor.cos(): Real;
 var xn: Real;
     n: Integer;
-
 begin
   Result:= 0;
   n:= 0;
@@ -239,11 +239,10 @@ begin
 end;
 
 function TTaylor.tanhInverse(): Real;
-
 var xn: Real;
     n: Integer;
 begin
-  Result: =0;
+  Result:= 0;
   n:= 0;
   repeat
         xn:=Result;
@@ -260,7 +259,7 @@ function TTaylor.geometrica(): Real;
 var xn: Real;
     n: Integer;
 begin
-  Result:= 0;
+  Result:= 0.0;
   n:= 0;
   repeat
         xn:= Result;
@@ -269,10 +268,9 @@ begin
            error:= abs(Result - xn);
         sequence.Add(FloatToStr(Result));
         n:= n+1;
-  until (error < = ErrorAllowed) or (n>=Top);
+  until (error <= ErrorAllowed) or (n>=Top);
 end;
 
-end;
 
 
 

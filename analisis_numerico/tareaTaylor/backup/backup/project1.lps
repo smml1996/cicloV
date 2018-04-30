@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="4">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="33"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -19,20 +19,20 @@
         <ComponentName Value="formGeneral"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="74"/>
-        <CursorPos X="5" Y="119"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="69"/>
+        <CursorPos X="5" Y="38"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="class_taylor.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="243"/>
-        <CursorPos X="36" Y="271"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="249"/>
+        <CursorPos X="7" Y="275"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -41,17 +41,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="56"/>
+        <TopLine Value="31"/>
         <CursorPos X="40" Y="61"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="16"/>
       </Unit3>
-      <Unit4>
-        <Filename Value="../../../../../Downloads/Taylor/maintaylor.pas"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-      </Unit4>
     </Units>
-    <JumpHistory Count="7" HistoryIndex="6">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="27" Column="23"/>
@@ -80,6 +75,62 @@
         <Filename Value="main.pas"/>
         <Caret Line="42" Column="3"/>
       </Position7>
+      <Position8>
+        <Filename Value="main.pas"/>
+        <Caret Line="9" Column="38" TopLine="3"/>
+      </Position8>
+      <Position9>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="32" Column="11"/>
+      </Position9>
+      <Position10>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="88" Column="5" TopLine="65"/>
+      </Position10>
+      <Position11>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="90" Column="35" TopLine="69"/>
+      </Position11>
+      <Position12>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="105" Column="18" TopLine="77"/>
+      </Position12>
+      <Position13>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="246" Column="12" TopLine="221"/>
+      </Position13>
+      <Position14>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="272" Column="17" TopLine="247"/>
+      </Position14>
+      <Position15>
+        <Filename Value="main.pas"/>
+        <Caret Line="86" Column="35" TopLine="61"/>
+      </Position15>
+      <Position16>
+        <Filename Value="main.pas"/>
+        <Caret Line="106" Column="20" TopLine="74"/>
+      </Position16>
+      <Position17>
+        <Filename Value="main.pas"/>
+        <Caret Line="110" Column="25" TopLine="75"/>
+      </Position17>
+      <Position18>
+        <Filename Value="main.pas"/>
+        <Caret Line="92" Column="45" TopLine="74"/>
+      </Position18>
+      <Position19>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="118" Column="79" TopLine="103"/>
+      </Position19>
+      <Position20>
+        <Filename Value="main.pas"/>
+        <Caret Line="103" Column="20" TopLine="75"/>
+      </Position20>
+      <Position21>
+        <Filename Value="class_taylor.pas"/>
+        <Caret Line="17" Column="13"/>
+      </Position21>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

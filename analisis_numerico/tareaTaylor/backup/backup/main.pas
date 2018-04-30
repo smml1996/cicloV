@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Grids;
+  ExtCtrls, Grids, class_taylor, math;
 
 type
 
@@ -25,7 +25,7 @@ type
     procedure executeTaylor(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-
+       Taylor: TTaylor;
   public
 
   end;
@@ -73,51 +73,50 @@ var
   f: Integer;
   procedure fillGrid;
   var i: Integer;
-    Error: Real;
+    error: Real;
   begin
-     with iteracionesGrid do
+     with iteracionesGrid do begin
      for i:= 1 to RowCount -1 do begin
-         case f of
+         case f of begin
               0: error:= sin(xx);
               1: error:= Cos(xx);
               2: error:= arsinh(xx);
               3: error:= lnxp1(xx);
               4: error:= arcsin(xx);
-              5: error:= arctan2(xxx,1);
-              6: error:=sinh(xx);
+              5: error:= arctan2(xx,1);
+              6: error:= sinh(xx);
               7: error:= cosh(xx);
               8: error:= artanh(xx);
-              9: error:= aa/(1-xx);
+              9: error:= aa/(1-Taylor.x);
          end;
 
-         error:= abs(error - StrToFloat( Cells[ColSequence, i] ));
+         error:= abs(error-StrToFloat( Cells[ColSequence, i] ));
          Cells[ColN, i]:= IntToStr(i);
          Cells[ColError, i]:= FloatToStr(error);
      end;
 
-  end;
-
+     end;
 begin
   Taylor:= TTaylor.create;
   Taylor.x := StrToFloat(x.Text);
-  x:= Taylor.x;
-  f:= Integer(inputFunciones.ItemIndex)-1;
-  a:= StrToFloat(A.text);
-  Taylor.a := a;
+  f:= Integer(inputFunciones.ItemIndex);
+  aa:= StrToFloat(A.text);
+  Taylor.a := aa;
   Taylor.functionType:= f;
   Taylor.ErrorAllowed:= StrToFloat(error.Text);
-  Taylor.AngleType:= Integer(inputAngleType.ItemIndex)-1;
-  resultadoLabel.Text:= FloatToStr(Taylor.execute());
+  Taylor.AngleType:= Integer(inputAngleType.ItemIndex);
+
+  if Taylor.AngleType = 0 then
+     xx:= Taylor.x/180 * Pi
+  else if Taylor.AngleType < 0 then
+     xx:= Taylor.x
+  else
+     xx:= Taylor.x;
+  resultadoLabel.Caption:= FloatToStr(Taylor.execute());
 
   with iteracionesGrid do begin
       RowCount:= Taylor.sequence.Count;
       Cols[ColSequence].Assign(Taylor.sequence);
   end;
-
   fillGrid;
-
-
 end;
-
-end.
-

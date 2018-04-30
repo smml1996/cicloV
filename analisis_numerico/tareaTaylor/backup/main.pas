@@ -75,7 +75,7 @@ var
   var i: Integer;
     error: Real;
   begin
-     with iteracionesGrid do
+     with iteracionesGrid do begin
      for i:= 1 to RowCount -1 do begin
          case f of
               0: error:= sin(xx);
@@ -95,8 +95,7 @@ var
          Cells[ColError, i]:= FloatToStr(error);
      end;
 
-  end;
-
+     end;
 begin
   Taylor:= TTaylor.create;
   Taylor.x := StrToFloat(x.Text);
@@ -119,11 +118,8 @@ begin
       RowCount:= Taylor.sequence.Count;
       Cols[ColSequence].Assign(Taylor.sequence);
   end;
-
   fillGrid;
-
-
 end;
 
-end.
 
+end.

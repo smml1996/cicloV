@@ -89,8 +89,8 @@ object formGeneral: TformGeneral
     ColWidths = (
       64
       97
-      64
-      64
+      134
+      122
       65
     )
     Cells = (
